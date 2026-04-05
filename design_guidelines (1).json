@@ -1,0 +1,96 @@
+{
+  "project_name": "Bureaucracy Intelligence Engine",
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "design_philosophy": {
+    "core_principles": [
+      "Authority, clarity, and truth",
+      "Color is Function Only: 95% monochrome, 5% signal colors",
+      "Swiss Grid: Asymmetric, modular, border-collapse styles",
+      "Typography as UI: Bold contrast in scale, flush-left alignment"
+    ],
+    "emotional_tone": "Objective, calming through extreme clarity, authoritative yet accessible."
+  },
+  "typography": {
+    "primary_font": "Cabinet Grotesk",
+    "primary_font_fallback": "sans-serif",
+    "secondary_font": "IBM Plex Sans",
+    "secondary_font_fallback": "sans-serif",
+    "rules": {
+      "headings": "text-4xl to text-6xl, tracking-tight, leading-none, font-black for top-level, flush-left.",
+      "body": "text-base, leading-relaxed, highly legible.",
+      "labels": "uppercase, tracking-[0.2em], text-xs, font-semibold."
+    }
+  },
+  "colors": {
+    "background": {
+      "base": "#FFFFFF",
+      "muted": "#F4F4F5",
+      "dark_section": "#121212"
+    },
+    "text": {
+      "primary": "#121212",
+      "secondary": "#52525B",
+      "inverse": "#FFFFFF"
+    },
+    "accents": {
+      "urgent": "#FF3B30",
+      "high": "#FF9500",
+      "medium": "#FFCC00",
+      "low": "#34C759",
+      "info": "#0055FF"
+    },
+    "borders": "#E4E4E7",
+    "rules": "Never use pure #000000 or #808080. Tint greys slightly. High contrast is mandatory. UI should feel like printed ink on pristine paper."
+  },
+  "layout_and_spacing": {
+    "grid_system": "The 'Control Room' Grid for Dashboards: Base grid-cols-1 md:grid-cols-3 lg:grid-cols-4. Tight gap (gap-4 or gap-6).",
+    "spacing_scale": "Use p-4, p-6, p-8, p-12. Containers with borders must have internal padding (p-6 or p-8).",
+    "surfaces": "Grid Borders (The 'Technical' Look). Use border-collapse style layout. Items have border-r border-b. Flat background, no shadow.",
+    "border_radius": "rounded-none or rounded-sm maximum to maintain rigid Swiss feel.",
+    "alignment": "Strictly flush-left. Never center by default."
+  },
+  "components_strategy": {
+    "general": "Heavily customize Shadcn UI components to strip standard rounding and shadows. Make them flat, sharp, and high-contrast.",
+    "buttons": "Flat solid background. text-white bg-[#121212] hover:bg-[#27272A]. For destructive: bg-[#FF3B30] text-white. Sharp corners (rounded-none).",
+    "cards": "Flat background, 1px subtle border (border-border), no shadow. Content highly structured. No hover lift, just border darken.",
+    "inputs": "Flat, sharp borders, focus:ring-2 focus:ring-[#121212] focus:border-transparent.",
+    "split_view": "For Document Analysis, use a 50/50 split on desktop: Left = Document Preview (PDF/Image viewer), Right = AI Extracted Data blocks in dense Swiss typography."
+  },
+  "motion_and_interaction": {
+    "hover_states": "Crisp and instant. Backgrounds darken slightly, borders sharpen.",
+    "transitions": "Minimalist. transition-colors duration-200.",
+    "focus_states": "High contrast ring (black or blue) on all interactive elements for accessibility."
+  },
+  "icons_and_assets": {
+    "icon_library": "@phosphor-icons/react",
+    "icon_style": "Duotone or regular weight. Used sparingly, typography is preferred for hierarchy.",
+    "image_urls": {
+      "hero_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/34d1154b-eb73-42d9-bc39-fc7398d69be9/images/a5e2cda63e8db977f61063c502dd4de9972ebd06a717f2465174278467e24e10.png",
+        "description": "Abstract high-contrast 3D composition of chaotic bureaucratic paperwork transforming into a clean, structured geometric grid.",
+        "usage": "Login/Signup page split background or Hero section of marketing landing page."
+      },
+      "action_visual": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/34d1154b-eb73-42d9-bc39-fc7398d69be9/images/4abb66760af8b55d9ef46d87ac16110c9e7912e2bbaa43a4ca6d9d7e47da7aff.png",
+        "description": "Macro close-up of a rubber stamp hitting a document.",
+        "usage": "Visual anchor for the subscription popup or document upload empty state."
+      },
+      "desk_paper": {
+        "url": "https://images.unsplash.com/photo-1687186901093-49c9e08b560f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBkZXNrJTIwcGFwZXJzfGVufDB8fHx8MTc3NTIzNTM1NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Blue and white paper on blue background.",
+        "usage": "Marketing features block or testimonial backdrop."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install fonts: yarn add @fontsource/cabinet-grotesk @fontsource/ibm-plex-sans. Ensure they are configured in tailwind.config.js.",
+    "Install @phosphor-icons/react for icons.",
+    "Use react-dropzone for the Document Upload component (drag and drop area).",
+    "Strictly adhere to the German language UI requirement (e.g., 'Dokument hochladen', 'Dringlichkeit', 'Fälligkeitsdatum').",
+    "The Output format of AI Document Analysis MUST rigidly follow the JSON structure described in the problem statement.",
+    "Apply 'data-testid' to all interactive and key informational elements (e.g., data-testid='upload-document-button').",
+    "For the priority labels, map strictly to colors: Urgent (Red #FF3B30), High (Orange #FF9500), Medium (Yellow #FFCC00), Low (Green #34C759).",
+    "Ensure the dashboard uses a Swiss Brutalist layout with 'border-collapse' like grids and absolute clarity over decoration."
+  ]
+}
